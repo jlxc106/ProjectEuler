@@ -2,6 +2,9 @@
 Written by: Jay Lim
 Start Date: Oct 7, 2016(lets see when I finally finish this one) LULZ
 problem statement can be found here: https://projecteuler.net/problem=502
+Note: works for 4x2, 3x3, 2x4. 
+	- Tried to test for 13x10 but execution time is > 3 hrs....(stopped code at 300 million)
+	- search for algorithm involving SUM(width!)
 */
 #include <iostream>
 #include <stdio.h>
@@ -14,7 +17,7 @@ class Board{
 
 int w, h;
 int numB;
-int aBoard[13][10];
+int aBoard[2][4];
 //int *aBoard = new int[w][h];
 
 public:
