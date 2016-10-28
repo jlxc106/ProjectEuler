@@ -15,70 +15,61 @@ using namespace std;
 
 class Board{
 
-int w, h;
-int numB;
-int aBoard[2][4];
-//int *aBoard = new int[w][h];
+	int w, h;
+	int aBoard[2][4];
+	//int *aBoard = new int[w][h];
 
 public:
-long long int count=0;
-Board(int x, int y): w(x>0 ? x:0), h(y>0 ? y:0), numB(1), count(0){
-//int aBoard [w][h];
-for(int i =0; i < x; i++) //width
-{
-	for(int j =0; j<y; j++) //height
+	long long unsigned int count=0; //maximize the different castle's that can be formed
+	Board(int x, int y): w(x>0 ? x:0), h(y>0 ? y:0), count(0)
 	{
-		if(j==0)
-			aBoard[i][j]=1;
-		else
-			aBoard[i][j]=0;
-	//	cout << "x: "<< i << " y: " << j << "\t"<< aBoard[i][j] << endl;
+		//int aBoard [w][h];
+		for(int i =0; i < x; i++) //width
+		{
+			for(int j =0; j<y; j++) //height
+			{
+				if(j==0)
+					aBoard[i][j]=1;
+				else
+					aBoard[i][j]=0;
+			//	cout << "x: "<< i << " y: " << j << "\t"<< aBoard[i][j] << endl;
+			}
+		}
 	}
-}
 
-}
-
-
-void recurse(int x, int y, int numBlock)
-{
-	cout << count << endl;
-	//cout << "x: " <<x << " y: "<< y<< endl;
-	//if you reach the end of the Board(x)
-	//numB = numBlock;
-	if(x >= w)
+	void recurse(int x, int y, int numBlock)
 	{
-		//cout << "if" <<endl;
-		recurse(0, y+1, numBlock);
-		return;
+		//cout << count << endl;
+		//cout << "x: " <<x << " y: "<< y<< endl;
+		//if you reach the end of the Board(x)
+		if(x >= w)
+		{
+			//cout << "if" <<endl;
+			recurse(0, y+1, numBlock);
+			return;
+		}
+		if(y >= h)
+		{
+			//cout << "if2" << endl;
+			return;
+		}
+		aBoard[x][y] = 0;
+	//	cout << "post if statements"<< endl;
+		recurse(x+1,y,numBlock);
+		if(x==0)
+			numBlock++;
+		else if(aBoard[x-1][y]==0)
+			numBlock++;
+		if(aBoard[x][y-1] != 0)
+		{
+		aBoard[x][y]=1;
+	//	aBoard[x][y]=numBlock;
+		if(numBlock%2 == 0)
+			count++;
+		recurse(x+1,y,numBlock);
+		}	
 	}
-	if(y >= h)
-	{
-		//cout << "if2" << endl;
-		return;
-	}
-	aBoard[x][y] = 0;
-//	cout << "post if statements"<< endl;
-	recurse(x+1,y,numBlock);
-	if(x==0)
-		numBlock++;
-		//A[x][y]=numBlock;
-	else if(aBoard[x-1][y]==0)
-		numBlock++;
-		//A[x][y]=numBlock;
-	if(aBoard[x][y-1] != 0)
-	{
-	aBoard[x][y]=1;
-//	aBoard[x][y]=numBlock;
-	if(numBlock%2 == 0)
-		count++;
-	recurse(x+1,y,numBlock);
-	}
-	
-}
-
 };
-
-
 
 int main(int argc, char* argv[])
 {	
