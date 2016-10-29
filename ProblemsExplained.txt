@@ -1,0 +1,93 @@
+
+#Problem 1: Multiples of 3 and 5
+Simple problem to find find numbers below 1000 that are multiples of 3 and 5 and sum them up.
+Solution involves if statements using modulo within a for loop.
+
+
+#Problem 2: Even Fibonacci numbers
+The Fibonacci sequence is a series of numbers starting with: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+The general rule for finding the value of a number in the Fibonacci sequence is: Fib(n) = Fib(n-2) + Fib(n-1)
+
+The problem statement asks us to find the sum of all the even-valued terms less than 4 million. 
+A while loop limits the Fibonacci elements to 4 million. Fib(n-2) and Fib(n-1) are stored in variables.
+In each iteration, Fib(n-2) and Fib(n-1) are updated(because n increases).
+
+
+#Problem 3: Large prime factor
+The problem statement gives us a large number(600851475143) and 
+asks us to find the largest prime factor. For instance, given a 
+number 13195, the prime factors are: 5, 7, 13, 29.
+
+A solution can be found by dividing the seed/large number by prime
+numbers(2, 3, 5, ...) while it is divisible.(i.e. seed%2). If the seed
+is not divisible by 2, we can move on to dividing it by 3, then 5, and so
+on and so forth. Because the seed will no longer be divisible by 2 or 3 
+non-prime numbers such as 6 or 9 will not be divisible by the seed.
+The final number that divides the seed is the largest prime factor.
+
+
+#Problem 4: Largest palindrome product
+A palindrome is something that reads the same back from the back as it does from the 
+front. For example, "racecar" is a palindrome because the starting and ending characters
+are both 'r' followed by 'a', 'c' and 'e'. The problem statement asks us to find the largest
+palindrome made from the product of two 3-digit numbers. Intuitively, one can access that
+the largest palindrome will be the product of two large 3-digit numbers.
+
+Multiples of 3-digit numbers range from 6-digits(e.g. 999 * 999 = 998001) 
+to 5-digits(e.g. 100 * 100 = 10000). Because there is no guarantee that a 
+6-digit palindrome exists, we need to check all possibilities(or until we find
+the first palindrome in the sequence). The first position of the number is 
+compared to the last position(array[0] == array[5]) then the next positions 
+are compared(array[1] == array[4]) and so on. However, in the case that
+array[0]==0, we are working with a 5-digit number and need to compare
+array[1] to array[5], and so on.
+
+
+Problem 5: Smallest multiple
+The problem statement asks to find the smallest number that is evenly divisible by 
+all the numbers from 1 to 20. For example, 6 is the smallest number divisible by 
+numbers 1, 2, and 3. For it to be divisible by 4, it must be multiplied by 2 (12 is
+divisible by 4, but 6 isn't). 
+
+The solution can be found using a for loop from 1 to 20 and for each iteration, looking
+for the smallest number that makes the multiple divisible by the current number.
+
+
+
+#Problem 6: Sum square difference
+This problem asks to determine the differnce between the
+sum of squares and the square of sums for a given set of 
+cumulative numbers.
+(e.g. (1+2+....+n)^2 minus (1^2 + 2^2 + ... + n^2))
+
+This problem can be solved using a single for loop(making 
+the solution O(n) time complexity.) where the programmer can 
+accumulate the counter(i.e. i) and the square of the counter(i.e. i^2).
+
+
+#Problem 7: 10001st prime
+In solving problem #7, the programmer is asked to find the 10001st
+prime number, with 2 being the 1st, 3 being the 2nd, and so on and so forth.
+
+The challenge of this problem lies in the programmer's ability 
+to write an algorithm that quickly determines the primality of a 
+number. While the primality test generally divides number n by all numbers
+from 2 to square root of n, the vast majority of these numbers can be neglected
+by only testing n's divisibility by primes less than n. For example, n's divisibility 
+by an even number can be determined from the conditional "if n%2==0:".
+
+
+#Problem 8: Largest product in series
+The problem presents a 1000 digit number from which the programmer has to find the
+13 digit sequence that gives the maximum product. For example, a 5 digit sequence
+'12345' has a product of 1*2*3*4*5 = 120. 
+
+A time efficient solution can be solved by using a nested for-loop, where the outer
+for-loop ranges from 0 to 987(the first position of 13 digit sequence) and the 
+inner for-loop ranges from 0 to 12. If the current iteration of product is greater than
+the previous maximum, the maximum product is updated.
+
+
+#Problem 9: 
+
+
