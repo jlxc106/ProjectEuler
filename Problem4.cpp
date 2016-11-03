@@ -30,17 +30,17 @@ bool test(int b){
 }
 
 int main(void){
-//	bool a = true;
 	int b;
 	int max=0;
 	for(int i =999; i >=100; i--){
 		for(int j=999; j >=100; j--){
 			b = i * j;
-			if(test(b))
-				if(max<b)
+			if(test(b)){
+				if(max<b){
 					max = b;
+				}
+			}
 		}
 	}
-	
 	cout << max << endl;
 }

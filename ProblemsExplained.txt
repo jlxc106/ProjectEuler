@@ -88,6 +88,28 @@ inner for-loop ranges from 0 to 12. If the current iteration of product is great
 the previous maximum, the maximum product is updated.
 
 
-#Problem 9: 
+#Problem 9: Special Pythagorean triplet
+A pythagorean triplet is a set of natural numbers(positive integers) that uphold the 
+pythagorean theorem: a^2 + b^2 = c^2. The problem statement presents us with an example
+of a=3, b=4, and c=5 and we are asked to find the unique product abc for which 
+a+b+c=1000.
+
+The problem can by approached by using a nested for-loop(for a and b) since they are 
+the raw input. Because the value of c can be derived from the pythagorean theorem, there is 
+no need to iterate through three for-loops. 
+
+The range of values of a and b help us reduce the amount of iteration necessary in reaching
+our solution. The problem statement clearly establishes that a is the smallest integer, b is 
+the median integer, and c is the largest. 
+
+The range of values of a is limited to positive numbers(hence greater than 0). By scaling the
+3:4:5 triangle to meet the condition a+b+c=1000, we get a rough estimate for what the ceiling
+for a should be. 
+
+The value of b is limited to be greater than the that of a and less than 500(otherwise it would
+be the largest value of the three integers).
+
+Finally, we utilize our two seed integer values to calculate the value of c.
+
 
 
