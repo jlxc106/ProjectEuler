@@ -112,4 +112,15 @@ be the largest value of the three integers).
 Finally, we utilize our two seed integer values to calculate the value of c.
 
 
+#Problem 10: Summation of primes
+The problem statement asks to find the summation fo all primes numbers less than 2 million.
+We can start all list of prime numbers from 2 and 3(the smallest primes). Outside of 2, 
+prime numbers are odd(meaning we can skip testing 1 million numbers by incrementing wisely).
 
+As stated in Problem 7, we only need to test a number's divisibility by other smaller prime numbers
+(a number divisible by 4 or 6 is also divisble by 2). 
+
+While running the script, iterating through a range of numbers(~20 seconds) had a faster 
+run time than iterating through the list(~400 seconds). 
+
+#Problem 11: 
