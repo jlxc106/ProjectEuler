@@ -120,7 +120,20 @@ prime numbers are odd(meaning we can skip testing 1 million numbers by increment
 As stated in Problem 7, we only need to test a number's divisibility by other smaller prime numbers
 (a number divisible by 4 or 6 is also divisble by 2). 
 
-While running the script, iterating through a range of numbers(~20 seconds) had a faster 
-run time than iterating through the list(~400 seconds). 
+While running the script, iterating through a range of numbers(~20 seconds) had a faster run time 
+than iterating through the list(~400 seconds). 
 
-#Problem 11: 
+The above phenomenon is most likely due to the list changing during iteration(considered bad coding
+practice).
+
+#Problem 11: Largest product in a grid
+Problem 11 presents us with a 20x20 "table" of small integer values and asks for the greatest product
+of four adjacent numbers(horizontal, vertical or diagonal). 
+
+Starting from an arbitrary value: there are 8 directions that one could go to calculate a product
+(left and right), (top and bottom), (top left, top right, bottom left, bottom right). However, only 
+four tests are necessary since some products results are bound to be overlaps of each other. In addition,
+the high number of calculations can be reduced if the value of the current index is 0.
+
+
+#Problem 12: 
