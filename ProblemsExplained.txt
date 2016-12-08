@@ -137,3 +137,17 @@ the high number of calculations can be reduced if the value of the current index
 
 
 #Problem 12: 
+Problem 12 introduces the concept of triangle numbers. Which is the sum of all the integers that precede it. For example, the 7th triangle number is 1+2+3+4+5+6+7 = 28. We are then asked to find the first triangle number with over 500 divisors. In the following paragraphs, I will present both basic and advanced solutions to the problem.
+
+Basic: 
+Starting from the sum = 1, add incrementing values(2,3,4,5,...) to the sum. One can then test all the numbers smaller than the sum if it is divisible(using modulo). If the total number of divisible numbers for the sum is less than or equal to 500, we increment the value of sum and repeat the process. There are several 
+modifications to the algorithm that help with our run time, such as restricting the divisible numbers test to the sqrt of the sum by accounting for the counter and its multiple(i.e. 2 * 14 = 28). However, the most impactful modification involves the use of prime numbers(surprise surprise).
+
+Advanced:
+To help explain the thought process, consider the triangle number 28. 28 can be reduced to its roots(prime numbers) of 2*2*7 = 2^2 * 7. These numbers formulate the divisible numbers of 28(1,2,4,7,14,28) and using the following equation, help us determine the total number of divisors of any given triangle number. 
+
+Number of Divisors = (a+1)*(b+1)*(c+1)...
+
+Where a, b, and c are the exponent values of each unique sum. Applying this equation to the number 28 results in (3)*(2) = 6, which represents the total number of divisible numbers of 28. As long as one has the access to a list of unique prime numbers, this solution will help vastly improve the run time of the solution. 
+
+

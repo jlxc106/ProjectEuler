@@ -3,13 +3,18 @@
 import math
 
 def primes(n):
-	primes = [2]
+	primes_list = [2]
 	attempt = 3
-	while len(primes) < n:
-		if all(attempt%prime != 0 for prime in primes):
-			primes.append(attempt)
+	while len(primes_list) < n:
+		if all(attempt%prime != 0 for prime in primes_list):
+			primes_list.append(attempt)
 		attempt +=2
-	return primes[-1]
+	return primes_list
 
 
-print primes(10001)
+#print primes(10001)
+
+
+
+
+
