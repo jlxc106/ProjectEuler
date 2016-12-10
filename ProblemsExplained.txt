@@ -151,3 +151,9 @@ Number of Divisors = (a+1)*(b+1)*(c+1)...
 Where a, b, and c are the exponent values of each unique sum. Applying this equation to the number 28 results in (3)*(2) = 6, which represents the total number of divisible numbers of 28. As long as one has the access to a list of unique prime numbers, this solution will help vastly improve the run time of the solution. 
 
 
+#Problem 13:
+
+
+#Problem 14:
+
+
