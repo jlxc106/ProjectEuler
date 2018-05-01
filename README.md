@@ -1,10 +1,10 @@
 
-#Problem 1: Multiples of 3 and 5
+# Problem 1: Multiples of 3 and 5
 Simple problem to find find numbers below 1000 that are multiples of 3 and 5 and sum them up.
 Solution involves if statements using modulo within a for loop.
 
 
-#Problem 2: Even Fibonacci numbers
+# Problem 2: Even Fibonacci numbers
 The Fibonacci sequence is a series of numbers starting with: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 The general rule for finding the value of a number in the Fibonacci sequence is: Fib(n) = Fib(n-2) + Fib(n-1)
 
@@ -13,7 +13,7 @@ A while loop limits the Fibonacci elements to 4 million. Fib(n-2) and Fib(n-1) a
 In each iteration, Fib(n-2) and Fib(n-1) are updated(because n increases).
 
 
-#Problem 3: Large prime factor
+# Problem 3: Large prime factor
 The problem statement gives us a large number(600851475143) and 
 asks us to find the largest prime factor. For instance, given a 
 number 13195, the prime factors are: 5, 7, 13, 29.
@@ -26,7 +26,7 @@ non-prime numbers such as 6 or 9 will not be divisible by the seed.
 The final number that divides the seed is the largest prime factor.
 
 
-#Problem 4: Largest palindrome product
+# Problem 4: Largest palindrome product
 A palindrome is something that reads the same back from the back as it does from the 
 front. For example, "racecar" is a palindrome because the starting and ending characters
 are both 'r' followed by 'a', 'c' and 'e'. The problem statement asks us to find the largest
@@ -42,7 +42,7 @@ are compared(array[1] == array[4]) and so on. However, in the case that
 array[0]==0, we are working with a 5-digit number and need to compare
 array[1] to array[5], and so on.
 
-#Problem 5: Smallest multiple
+# Problem 5: Smallest multiple
 The problem statement asks to find the smallest number that is evenly divisible by 
 all the numbers from 1 to 20. For example, 6 is the smallest number divisible by 
 numbers 1, 2, and 3. For it to be divisible by 4, it must be multiplied by 2 (12 is
@@ -51,7 +51,7 @@ divisible by 4, but 6 isn't).
 The solution can be found using a for loop from 1 to 20 and for each iteration, looking
 for the smallest number that makes the multiple divisible by the current number.
 
-#Problem 6: Sum square difference
+# Problem 6: Sum square difference
 This problem asks to determine the differnce between the
 sum of squares and the square of sums for a given set of 
 cumulative numbers.
@@ -62,7 +62,7 @@ the solution O(n) time complexity.) where the programmer can
 accumulate the counter(i.e. i) and the square of the counter(i.e. i^2).
 
 
-#Problem 7: 10001st prime
+# Problem 7: 10001st prime
 In solving problem #7, the programmer is asked to find the 10001st
 prime number, with 2 being the 1st, 3 being the 2nd, and so on and so forth.
 
@@ -74,7 +74,7 @@ by only testing n's divisibility by primes less than n. For example, n's divisib
 by an even number can be determined from the conditional "if n%2==0:".
 
 
-#Problem 8: Largest product in series
+# Problem 8: Largest product in series
 The problem presents a 1000 digit number from which the programmer has to find the
 13 digit sequence that gives the maximum product. For example, a 5 digit sequence
 '12345' has a product of 1*2*3*4*5 = 120. 
@@ -85,7 +85,7 @@ inner for-loop ranges from 0 to 12. If the current iteration of product is great
 the previous maximum, the maximum product is updated.
 
 
-#Problem 9: Special Pythagorean triplet
+# Problem 9: Special Pythagorean triplet
 A pythagorean triplet is a set of natural numbers(positive integers) that uphold the 
 pythagorean theorem: a^2 + b^2 = c^2. The problem statement presents us with an example
 of a=3, b=4, and c=5 and we are asked to find the unique product abc for which 
@@ -109,7 +109,7 @@ be the largest value of the three integers).
 Finally, we utilize our two seed integer values to calculate the value of c.
 
 
-#Problem 10: Summation of primes
+# Problem 10: Summation of primes
 The problem statement asks to find the summation fo all primes numbers less than 2 million.
 We can start all list of prime numbers from 2 and 3(the smallest primes). Outside of 2, 
 prime numbers are odd(meaning we can skip testing 1 million numbers by incrementing wisely).
@@ -123,7 +123,7 @@ than iterating through the list(~400 seconds).
 The above phenomenon is most likely due to the list changing during iteration(considered bad coding
 practice).
 
-#Problem 11: Largest product in a grid
+# Problem 11: Largest product in a grid
 Problem 11 presents us with a 20x20 "table" of small integer values and asks for the greatest product
 of four adjacent numbers(horizontal, vertical or diagonal). 
 
@@ -133,7 +133,7 @@ four tests are necessary since some products results are bound to be overlaps of
 the high number of calculations can be reduced if the value of the current index is 0.
 
 
-#Problem 12: 
+# Problem 12: 
 Problem 12 introduces the concept of triangle numbers. Which is the sum of all the integers that precede it. For example, the 7th triangle number is 1+2+3+4+5+6+7 = 28. We are then asked to find the first triangle number with over 500 divisors. In the following paragraphs, I will present both basic and advanced solutions to the problem.
 
 Basic: 
@@ -147,13 +147,13 @@ Number of Divisors = (a+1)*(b+1)*(c+1)...
 
 Where a, b, and c are the exponent values of each unique sum. Applying this equation to the number 28 results in (3)*(2) = 6, which represents the total number of divisible numbers of 28. As long as one has the access to a list of unique prime numbers, this solution will help vastly improve the run time of the solution. 
 
-#Problem 13:
+# Problem 13:
 Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 https://projecteuler.net/problem=13 for array of large numbers
 
 Create a list/array of numbers and sum up all the numbers in the array. pick the first 10 digits from that sum.
 
-#Problem 14:
+# Problem 14:
 https://projecteuler.net/problem=14 
 f(n) = n/2 if n = even; 3n+1 if n = odd; All numbers finish when they reach 1.
 Which starting number, under one million, produces the longest chain?
@@ -164,7 +164,7 @@ Then running the function f(n) for all values between 999999 and 1(inclusive). W
 to match the local counter.
 
 
-#Problem 15: 
+# Problem 15: 
 https://projecteuler.net/problem=15
 How many routes are possible through a 20x20 grid?
 
@@ -176,7 +176,7 @@ https://www.mathblog.dk/project-euler-15/
 
 This problem can be solved faster by utilizing this pattern: f(x,y) = f(x+1, y) + f(x, y+1). With boundary conditions of f(20,20) = 0, and f(x,20) = f(20,x)=1 where x is any integer between 0 and 19. Using this formula one can build a multidimensional array to record the number of paths possible from each grid point.
 
-#Problem 16:
+# Problem 16:
 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 What is the sum of the digits of the number 2^1000?
 
