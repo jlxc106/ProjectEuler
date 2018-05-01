@@ -1,18 +1,19 @@
 #!/usr/bin/python
 # problem statement: projecteuler.net/problem=15
 
-i=0
+import timeit
 
-def f(x,y):
-	global i
-	if x < 20:
-		f(x+1,y)
-	if y < 20:
-		f(x,y+1)
-	if x==20 and y==20:
-		i +=1
-		print i
+def f():
+	Matrix = [[0 for x in range(21)] for y in range(21)]
+	for x in range(20):
+		Matrix[x][20] = 1
+		Matrix[20][x] = 1
+	for x in range(19,-1, -1):
+		for y in range(19,-1,-1):
+			Matrix[x][y] = Matrix[x+1][y] + Matrix[x][y+1]
+	print Matrix[0][0]
 
-
-f(0,0)
-print i
+start = timeit.default_timer()
+f()
+stop = timeit.default_timer()
+print "time: " + str(stop-start)
