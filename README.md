@@ -184,3 +184,14 @@ This is a fairly straight forward problem. After one gets multiple using Python'
 
 Note: using the Math library's pow() function returns a float, will result in the wrong answer. The built in pow() function returns an integer. (e.g. 123.45 % 10 = 3.45)
 
+# Problem 17:
+https://projecteuler.net/problem=17
+Sum up all the numbers between 1 and 1000(inclusive) written into words. 
+
+NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+
+There are a couple ways to tackle this problem.
+    1) use a formula that counts the number of letters each number is written out into words(the way that seems natural to people)
+    2) count the number of 'hundred', 'and', 'twenty', 'five' in total and sum up the occurances of each
+
+Because method 2) requries more work pre-programming(i.e. counting the number of occurances of hundreds between 100 and 999), I chose to utilize method 1)
