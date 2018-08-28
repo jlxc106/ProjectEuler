@@ -195,3 +195,13 @@ There are a couple ways to tackle this problem.
     2) count the number of 'hundred', 'and', 'twenty', 'five' in total and sum up the occurances of each
 
 Because method 2) requries more work pre-programming(i.e. counting the number of occurances of hundreds between 100 and 999), I chose to utilize method 1)
+
+# Problem 18:
+https://projecteuler.net/problem=18
+Find the maximum total from top to bottom by moving to adjacent numbers on the row immediately below. The brute force method will not suffice.
+
+Break up the pyramid into smaller pieces by working from the bottom up.
+
+Starting from the 2nd to last row, calculate the maximum sum assuming the current node is the root of the pyramid/tree. (ex. the max sum assuming root @ 63 is 125(63+62)). Repeat for all numbers in the 2nd to last row.
+
+Starting from the next row([91, 71, 52, ...]), calculate the maximum sum using the maximum from the previous row(ex. assuming root @ 91, max is 255 (91+164)). Repeat for rest of the numbers & rows.
